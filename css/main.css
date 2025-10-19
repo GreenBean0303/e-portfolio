@@ -13,27 +13,30 @@ html,body {
     font-style: bold;
     line-height: 1.5;
     color: #19150bff;
-    background-color: #ffffffff;
+    background-color: #000000;
     margin: 0;
     padding: 0;
-    opacity: 1;
-    transition: opacity 0.5s ease, background-color 0.5s ease;
+    opacity: 1; 
+    transition: opacity 0.5s ease;
     display: flex;
     flex-direction: column; 
     height: 100%;
 }
 
+body.fade-in {
+    opacity: 1; 
+}
+
 body.fade-out {
-    opacity: 0; /* Fade-out effect */
-    background-color: #2D2640; 
+    opacity: 0; 
 }
 
 main {
-    flex: 1; /* Push the footer to the bottom by taking up available space */
+    flex: 1;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 80px;
-    
+    background-color: #ffffff; 
 }
 
 h1, h2, h3, h4 {
@@ -44,10 +47,9 @@ h1, h2, h3, h4 {
 p {
     margin-bottom: 1.9rem;
 }
-
 /* Navbar */
 .navbar1 {
-    background-color: #2D2640;
+    background-color: #000000;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -56,15 +58,15 @@ p {
     
 }
 .navbar {
-    background-color: #2D2640;
+    background-color: #000000;
     margin: 0;
     padding: 0;
     overflow: hidden;
     z-index: 1050;
     position: fixed;
-    top: 0;  /* Keeps it at the top */
+    top: 0; 
     left: 0;
-    width: 100%;  /* Ensures it stretches across the screen */
+    width: 100%; 
 }
 .navbar-logo {
     max-height: 150px; 
@@ -80,10 +82,10 @@ p {
     white-space: nowrap; 
 }
 .navbar-nav .nav-link:hover {
-    color: #A78BFA;
+     color: #893168;
 }
 .navbar-nav .nav-link.active {
-    color: #8B5CF6;
+    color: #893168;
 }
 .navbar .container{
 
@@ -94,7 +96,7 @@ p {
 
 /* Showcase */
 header {
-    background-color: #2D2640;
+    background-color: #000000;
     color: #ffffff;
     text-align: center;
     padding: 4rem 0;
@@ -121,7 +123,7 @@ header .btn {
 }
 
 #info .col-md-6 {
-    padding: 15px; /* Add padding inside the columns */
+    padding: 15px;
 }
 
 /* Hobbies Section */
@@ -140,7 +142,7 @@ header .btn {
 
 #hobbies h2 {
     margin-bottom: 1.5rem;
-    color: #8B5CF6; 
+    color: #893168;  
 }
 
 #hobbies p {
@@ -170,7 +172,7 @@ header .btn {
     overflow: hidden;
 }
 .text-primary {
-    color: #8B5CF6!important; 
+    color: #893168!important;
 }
 
 .rounded {
@@ -189,11 +191,11 @@ header .btn {
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #ffffff;
-    background-color: #8B5CF6;
+    background-color: #893168;
 }
 
 .btn:hover {
-    background-color: #A78BFA; 
+    background-color: #4A1942;
     color: #ffffff;
 }
 
@@ -212,15 +214,15 @@ header .btn {
 }
 
 .card-text {
-    flex-grow: 1; /* Allows the text to take up remaining space */
+    flex-grow: 1; 
 }
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 8px 16px rgba(137, 49, 104, 0.3)
 }
 
 .card h3 {
-    color: #6D28D9;
+    color: #4A1942;
 }
 
 .card p {
@@ -233,6 +235,6 @@ header .btn {
 footer {
     text-align: center;
     padding: 20px;
-    background: #2D2640;
+    background: rgb(0, 0, 0);
     color: #fff;
 }
