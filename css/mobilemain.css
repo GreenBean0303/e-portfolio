@@ -1,0 +1,127 @@
+@media (max-width: 990px) {
+
+    /* General Adjustments */
+    html, body {
+      padding: 0;
+      margin: 0;
+      font-size: 14px; 
+    }
+  
+    main {
+      padding: 10px; 
+      padding-top: 80px;
+    }
+  
+    h1, h2, h3, h4 {
+      font-size: 1.6rem; 
+      text-align: center; 
+    }
+  
+    p {
+      font-size: 1.4 rem; 
+      line-height: 1.6; 
+    }
+  
+    /* Navbar Adjustments */
+    .navbar {
+        padding: 0 10px; 
+      }
+    
+      .navbar-logo {
+        max-width: 80px;
+        margin-right: auto; 
+      }
+    
+      .navbar-toggler {
+        margin: 0;
+      }
+
+      .navbar-toggler-icon {
+        filter: brightness(5); /* Makes it much brighter */
+        border-radius: 5px; /* Optional: Adds a soft edge */
+    }
+        
+    .navbar-nav .nav-link {
+      font-size: 1.5rem; 
+      padding: 5px 0;
+      text-align: center; 
+    }
+  
+    .navbar-nav {
+      flex-direction: column; 
+    }
+    
+    .navbar .container {
+        padding-left: 15px; 
+        padding-right: 15px;
+        text-align: center; 
+      }
+      
+  
+    /* Header Section */
+    header {
+      padding: 2rem 1rem; 
+    }
+  
+    header h1 {
+      font-size: 2rem; 
+      margin-bottom: 1rem;
+    }
+  
+    header p {
+      font-size: 1rem; 
+      margin-bottom: 1.5rem;
+    }
+  
+    /* Info Section */
+    #info .container {
+      padding: 0 15px; 
+    }
+  
+    #info .col-md-6 {
+      width: 100%; 
+      padding: 10px 0;
+    }
+  
+    #info .picture {
+      max-width: 100%; 
+      width: auto;
+    }
+  
+    /* Hobbies Section */
+    #hobbies {
+      padding: 1.5rem 1rem; 
+    }
+  
+    #hobbies h2 {
+      font-size: 1.8rem; 
+      text-align: center;
+    }
+  
+    #hobbies p {
+      font-size: 0.9rem; 
+      padding: 0; 
+    }
+  
+    #hobbies .img-fluid {
+      max-width: 100%; 
+      margin-bottom: 1rem; 
+    }
+  
+    /* Footer Adjustments */
+    footer {
+      font-size: 0.8rem; 
+      padding: 10px; 
+    }
+  
+    /* Utilities */
+    .container {
+      width: 100%; 
+      padding: 0 15px;
+    }
+  
+    .btn {
+      font-size: 0.8rem; 
+      padding: 10px 15px; 
+    }
+  }

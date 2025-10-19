@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Londrina+Sketch&family=Orbitron:wght@400..900&family=Signika:wght@300..700&display=swap');
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-size: 1.3rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 1.5;
+    color: #19150bff;
+    background-color: #ffffffff;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+}
+
+body.fade-out {
+    opacity: 0; /* Fade-out effect */
+    background-color: #000000; 
+}
+
+
+
+main {
+    flex: 1; /* Push the footer to the bottom by taking up available space */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 80px;
+    
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.9rem;
+}
+
+/* Navbar */
+.navbar1 {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1050;
+    position: fixed;
+    
+}
+.navbar {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1050;
+    position: fixed;
+    top: 0;  /* Keeps it at the top */
+    left: 0;
+    width: 100%;  /* Ensures it stretches across the screen */
+}
+.navbar-logo {
+    max-height: 150px; 
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.navbar-nav .nav-link {
+    color: #ffffff;
+    transition: smooth;
+    font-size: larger;
+    padding: 0 10px;
+    font-size: larger; 
+    white-space: nowrap; 
+}
+.navbar-nav .nav-link:hover {
+    color: #911816;
+}
+.navbar-nav .nav-link.active {
+    color: #B5232A;
+}
+.navbar .container{
+
+    padding-left: 100px;
+    padding-right: 100px;
+   
+}
+
+/* Showcase */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 0;
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+header p {
+    font-size: 1.2rem;
+}
+header .btn {
+    margin-top: 1rem;
+}
+
+/* About me Section */
+#info .container {
+    padding-left: 100px;
+    padding-right: 15px;
+}
+
+#info .row {
+    margin: 0 auto;
+}
+
+#info .col-md-6 {
+    padding: 15px; /* Add padding inside the columns */
+}
+
+/* Hobbies Section */
+#hobbies {
+    background-color: #ffffff;
+    padding: 3rem 0;
+    padding-right: 100px;
+}
+
+#hobbies .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#hobbies h2 {
+    margin-bottom: 1.5rem;
+    color: #911816; 
+}
+
+#hobbies p {
+    margin-bottom: 1rem;
+    padding-right: 200px;
+}
+
+/*Utilities*/
+.picture {
+    width: 500px;
+    margin: 0 auto; 
+    display: block;
+    max-width: 100%; 
+    height: auto; 
+}
+.picture2 {
+    width: 800px;
+    margin: 0 auto; 
+    display: block;
+    max-width: 100%; 
+    height: auto; 
+}
+.container{
+    margin: auto;
+    padding: 0px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.text-primary {
+    color: #911816!important; 
+}
+
+.rounded {
+    border-radius: 10px !important; 
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #ffffff;
+    background-color: #911816;
+}
+
+.btn:hover {
+    background-color: #000000; 
+    color: #ffffff;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #e3dade;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-text {
+    flex-grow: 1; /* Allows the text to take up remaining space */
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #7a0c0c;
+}
+
+.card p {
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
