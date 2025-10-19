@@ -225,7 +225,7 @@ header .btn {
     box-shadow: 0 8px 16px rgba(137, 49, 104, 0.3);
 }
 
-.card h3 {
+.card h3, .card h4 {
     color: #4A1942;
 }
 
@@ -233,6 +233,7 @@ header .btn {
     margin-bottom: 1rem;
     color: #000000;
 }
+
 
 
 /* Footer */
