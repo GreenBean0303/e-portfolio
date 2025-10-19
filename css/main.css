@@ -25,10 +25,8 @@ html,body {
 
 body.fade-out {
     opacity: 0; /* Fade-out effect */
-    background-color: #000000; 
+    background-color: #2D2640; 
 }
-
-
 
 main {
     flex: 1; /* Push the footer to the bottom by taking up available space */
@@ -49,7 +47,7 @@ p {
 
 /* Navbar */
 .navbar1 {
-    background-color: #000000;
+    background-color: #2D2640;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -58,7 +56,7 @@ p {
     
 }
 .navbar {
-    background-color: #000000;
+    background-color: #2D2640;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -82,10 +80,10 @@ p {
     white-space: nowrap; 
 }
 .navbar-nav .nav-link:hover {
-    color: #911816;
+    color: #A78BFA;
 }
 .navbar-nav .nav-link.active {
-    color: #B5232A;
+    color: #8B5CF6;
 }
 .navbar .container{
 
@@ -96,7 +94,7 @@ p {
 
 /* Showcase */
 header {
-    background-color: #000000;
+    background-color: #2D2640;
     color: #ffffff;
     text-align: center;
     padding: 4rem 0;
@@ -142,7 +140,7 @@ header .btn {
 
 #hobbies h2 {
     margin-bottom: 1.5rem;
-    color: #911816; 
+    color: #8B5CF6; 
 }
 
 #hobbies p {
@@ -172,7 +170,7 @@ header .btn {
     overflow: hidden;
 }
 .text-primary {
-    color: #911816!important; 
+    color: #8B5CF6!important; 
 }
 
 .rounded {
@@ -191,11 +189,11 @@ header .btn {
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #ffffff;
-    background-color: #911816;
+    background-color: #8B5CF6;
 }
 
 .btn:hover {
-    background-color: #000000; 
+    background-color: #A78BFA; 
     color: #ffffff;
 }
 
@@ -204,7 +202,7 @@ header .btn {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #e3dade;
+    background-color: #F3E8FF;
 }
 .card-body {
     display: flex;
@@ -218,11 +216,11 @@ header .btn {
 }
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(139, 92, 246, 0.3);
 }
 
 .card h3 {
-    color: #7a0c0c;
+    color: #6D28D9;
 }
 
 .card p {
@@ -235,6 +233,6 @@ header .btn {
 footer {
     text-align: center;
     padding: 20px;
-    background: rgb(0, 0, 0);
+    background: #2D2640;
     color: #fff;
 }
