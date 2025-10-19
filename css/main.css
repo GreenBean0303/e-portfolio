@@ -21,7 +21,7 @@ body {
     margin: 0;
     padding: 0;
     opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards; /* Auto fade-in on load */
+    animation: fadeIn 0.5s ease-in forwards;
     display: flex;
     flex-direction: column; 
     min-height: 100vh;
@@ -34,7 +34,7 @@ body {
 
 body.fade-out {
     opacity: 0;
-    animation: none; /* Disable fade-in animation when fading out */
+    animation: none;
 }
 
 main {
@@ -94,10 +94,8 @@ p {
     color: #893168;
 }
 .navbar .container{
-
     padding-left: 100px;
     padding-right: 100px;
-   
 }
 
 /* Showcase */
@@ -224,7 +222,7 @@ header .btn {
 }
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(137, 49, 104, 0.3)
+    box-shadow: 0 8px 16px rgba(137, 49, 104, 0.3);
 }
 
 .card h3 {
@@ -244,5 +242,5 @@ footer {
     background: rgb(0, 0, 0);
     color: #fff;
     flex-shrink: 0; 
-    margin-top: auto; /* Add this */
+    margin-top: auto; 
 }
