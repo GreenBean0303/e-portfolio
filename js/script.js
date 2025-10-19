@@ -1,9 +1,12 @@
-// Fade in on page load
+// Start fade-in immediately, even before DOM is fully loaded
+document.body.classList.add('fade-in');
+
+// Also ensure it runs when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('fade-in');
 });
 
-// Add fade-out effect when clicking links or logo  
+// Add fade-out effect when clicking links or logo
 document.querySelectorAll('a.nav-link, .navbar-logo').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
