@@ -1,5 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Londrina+Sketch&family=Orbitron:wght@400..900&family=Signika:wght@300..700&display=swap');
-/*General*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* ===================================
+   COLOR PALETTE
+   ================================ */
+:root {
+    /* Main colors */
+    --color-black: #000000;
+    --color-deep-charcoal: #0a0a0a;
+    --color-charcoal: #1a1a1a;
+    --color-dark-gray: #252525;
+    --color-medium-gray: #3a3a3a;
+    
+    /* Text colors */
+    --color-text-light: #e8e8e8;
+    --color-text-medium: #cccccc;
+    --color-text-dark: #b8b8b8;
+    
+    /* Accent colors */
+    --color-accent-primary: #893168;
+    --color-accent-dark: #6b2d5c;
+    --color-accent-darker: #4A1942;
+    --color-accent-muted: #a64d79;
+    --color-accent-light: #d4a5c4;
+    
+    /* Shadows */
+    --shadow-small: 0 4px 8px rgba(0, 0, 0, 0.6);
+    --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.7);
+    --shadow-large: 0 8px 30px rgba(137, 49, 104, 0.4);
+}
+
+/* ===================================
+   RESET & BASE STYLES
+   ================================ */
 * {
     margin: 0;
     padding: 0;
@@ -7,24 +39,24 @@
 }
 
 html {
-    background-color: #000000 !important;
+    background-color: var(--color-black);
+    scroll-behavior: smooth;
 }
 
 body {
     font-size: 1.3rem;
     font-family: "Cormorant Garamond", serif;
-    font-weight: 700;
-    font-style: bold;
-    line-height: 1.5;
-    color: #19150bff;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    background-color: var(--color-black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    /* Fade-in animation */
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
-    display: flex;
-    flex-direction: column; 
-    min-height: 100vh;
 }
 
 @keyframes fadeIn {
@@ -37,211 +69,363 @@ body.fade-out {
     animation: none;
 }
 
-main {
-    flex: 1;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 80px;
-    background-color: #ffffff; 
+/* ===================================
+   TYPOGRAPHY
+   ================================ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
 }
 
-h1, h2, h3, h4 {
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
 
 p {
-    margin-bottom: 1.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
-/* Navbar */
+
+/* ===================================
+   LAYOUT
+   ================================ */
+main {
+    flex: 1;
+    padding: 80px 50px 50px;
+    background: linear-gradient(to bottom, var(--color-deep-charcoal), var(--color-charcoal));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===================================
+   NAVIGATION
+   ================================ */
+.navbar,
 .navbar1 {
-    background-color: #000000;
-    margin: 0;
+    background-color: var(--color-black);
     padding: 0;
-    overflow: hidden;
-    z-index: 1050;
     position: fixed;
-    
-}
-.navbar {
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    z-index: 1050;
-    position: fixed;
-    top: 0; 
+    top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
+    z-index: 1050;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
+
+.navbar .container {
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This creates maximum space between logo and nav */
+}
+
 .navbar-logo {
-    max-height: 150px; 
+    max-height: 120px;
     margin-right: 20px;
     margin-bottom: 10px;
-}
-.navbar-nav .nav-link {
-    color: #ffffff;
-    transition: smooth;
-    font-size: larger;
-    padding: 0 10px;
-    font-size: larger; 
-    white-space: nowrap; 
-}
-.navbar-nav .nav-link:hover {
-     color: #893168;
-}
-.navbar-nav .nav-link.active {
-    color: #893168;
-}
-.navbar .container{
-    padding-left: 100px;
-    padding-right: 100px;
+    transition: opacity 0.3s ease;
 }
 
-/* Showcase */
-header {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 4rem 0;
+.navbar-logo:hover {
+    opacity: 0.8;
 }
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-text-light);
+    font-size: 1.9rem;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-accent-primary);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--color-accent-primary);
+    font-weight: 700;
+}
+
+/* ===================================
+   HEADER / HERO
+   ================================ */
+header {
+    background-color: var(--color-black);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
 header h1 {
-    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
+
 header p {
     font-size: 1.2rem;
+    color: var(--color-text-medium);
 }
+
 header .btn {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
-/* About me Section */
-#info .container {
-    padding-left: 100px;
-    padding-right: 15px;
+/* ===================================
+   SECTIONS
+   ================================ */
+section {
+    padding: 4rem 0;
 }
 
-#info .row {
-    margin: 0 auto;
+/* Alternating section backgrounds for depth */
+#info,
+#work,
+#courses {
+    background-color: var(--color-charcoal);
 }
 
-#info .col-md-6 {
+#hobbies,
+#projects,
+#skills,
+#education,
+#certificates,
+#contact {
+    background-color: var(--color-deep-charcoal);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-accent-muted);
+    font-size: 2.5rem;
+}
+
+/* Info Section Specific */
+#info .container,
+#hobbies .container {
+    max-width: 1200px;
+}
+
+#info .col-md-6,
+#hobbies .col-md-6 {
     padding: 15px;
 }
 
-/* Hobbies Section */
-#hobbies {
-    background-color: #ffffff;
-    padding: 3rem 0;
-    padding-right: 100px;
-}
-
-#hobbies .img-fluid {
-    max-width: 100%;
-    height: auto;
+/* ===================================
+   CARDS
+   ================================ */
+.card {
+    background: linear-gradient(135deg, var(--color-dark-gray), var(--color-charcoal));
+    border: 1px solid var(--color-medium-gray);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#hobbies h2 {
-    margin-bottom: 1.5rem;
-    color: #893168;  
-}
-
-#hobbies p {
-    margin-bottom: 1rem;
-    padding-right: 200px;
-}
-
-/*Utilities*/
-.picture {
-    width: 500px;
-    margin: 0 auto; 
-    display: block;
-    max-width: 100%; 
-    height: auto; 
-}
-.picture2 {
-    width: 800px;
-    margin: 0 auto; 
-    display: block;
-    max-width: 100%; 
-    height: auto; 
-}
-.container{
-    margin: auto;
-    padding: 0px;
-    max-width: 100%;
+    box-shadow: var(--shadow-small);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
-.text-primary {
-    color: #893168!important;
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-large);
 }
 
-.rounded {
-    border-radius: 10px !important; 
-}
-
-.shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.btn {
-    align-self: center;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    padding: 0.75rem 1.25rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    color: #ffffff;
-    background-color: #893168;
-}
-
-.btn:hover {
-    background-color: #4A1942;
-    color: #ffffff;
-}
-
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #F3E8FF;
-}
 .card-body {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
 
-.card-text {
-    flex-grow: 1; 
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(137, 49, 104, 0.3);
-}
-
-.card h3, .card h4 {
-    color: #4A1942;
-}
-
-.card p {
+.card-title {
+    color: var(--color-accent-light);
     margin-bottom: 1rem;
-    color: #000000;
+    font-size: 1.5rem;
 }
 
+.card h3,
+.card h4 {
+    color: var(--color-accent-light);
+}
 
+.card-text,
+.card p {
+    color: var(--color-text-medium);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
 
-/* Footer */
-footer {
+.card ul {
+    color: var(--color-text-medium);
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===================================
+   BUTTONS
+   ================================ */
+.btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
     text-align: center;
-    padding: 20px;
-    background: rgb(0, 0, 0);
-    color: #fff;
-    flex-shrink: 0; 
-    margin-top: auto; 
+    color: var(--color-text-light);
+    background-color: var(--color-accent-dark);
+    border: 2px solid var(--color-accent-dark);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--color-accent-darker);
+    border-color: var(--color-accent-darker);
+    color: var(--color-text-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* ===================================
+   IMAGES
+   ================================ */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    border: 2px solid var(--color-medium-gray);
+}
+
+.picture {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    border: 2px solid var(--color-medium-gray);
+}
+
+.picture2 {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    border: 2px solid var(--color-medium-gray);
+}
+
+/* ===================================
+   UTILITIES
+   ================================ */
+.text-primary {
+    color: var(--color-accent-muted) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 10px !important;
+}
+
+.shadow {
+    box-shadow: var(--shadow-small);
+}
+
+.bg-light {
+    background-color: var(--color-charcoal) !important;
+}
+
+/* Bootstrap row/col adjustments */
+.row {
+    margin: 0 -15px;
+}
+
+.col-md-6,
+.col-md-4,
+.col-lg-4,
+.col-lg-5 {
+    padding: 15px;
+}
+
+/* ===================================
+   FOOTER
+   ================================ */
+footer {
+    background-color: var(--color-black);
+    color: var(--color-text-medium);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: auto;
+    border-top: 1px solid var(--color-medium-gray);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ===================================
+   INDEX PAGE SPECIFIC
+   ================================ */
+.index-page {
+    background-color: var(--color-black);
+}
+
+.index-page .navbar1 {
+    position: static;
+}
+
+.index-page .navbar-logo {
+    max-height: 250px !important;
+}
+
+/* ===================================
+   RESPONSIVE ADJUSTMENTS
+   ================================ */
+@media (max-width: 768px) {
+    main {
+        padding: 80px 20px 20px;
+    }
+    
+    .navbar .container {
+        padding: 0 15px;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .picture {
+        width: 100%;
+    }
+    
+    .picture2 {
+        width: 100%;
+    }
 }
